@@ -1,0 +1,14 @@
+syntax = "proto3";
+package proto;
+option go_package = "../query";
+service QueryService {
+  rpc Query(QueryRequest) returns (QueryResponse) {}
+}
+message QueryRequest{
+  string name=1;
+  string size=2;
+}
+message QueryResponse{
+  string des=1;
+  string phone=2;
+}
